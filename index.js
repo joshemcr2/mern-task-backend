@@ -43,29 +43,3 @@ const servidor = app.listen(PORT, () => {
   console.log(`Servidor Corriendo en el Puerto ${PORT}`);
 });
 
-//socket.io
-import { Server, Socket } from "socket.io";
-
-const io = new Server(servidor, {
-  pingTimeout: 6000,
-  cors: {
-    origin: process.env.FRONTEND_URL,
-  },
-});
-io.on("connection", (socket) => {
-  console.log("conectado a socket.io");
-  //definir los eventos
-  socket.on("abrir proyecto", (proyecto) => {
-    socket.join(proyecto);
-  });
-
-  socket.on("nueva tarea", (tarea) => {
-    const proyecto = tarea.proyecto;
-    socket.to(proyecto).emit("tarea Agregada", tarea);
-  });
-
-  socket.on("eliminar tarea", (tarea) => {
-    const proyecto = tarea.proyecto;
-    socket.to(proyecto).emit("tarea eliminada", tarea);
-  });
-});
