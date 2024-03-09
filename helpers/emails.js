@@ -12,7 +12,7 @@ export const emailRegistro = async (datos) => {
   });
   // informacion del email
   const info = await transport.sendMail({
-    from: "UpTask - Administrador de Proyectos <jamc19962222@gmail.com>",
+    from: "UpTask - Administrador de Proyectos <jamc221996@gmail.com>",
     to: email,
     subject: "UpTask - Confirma tu cuenta",
     text: "Confirma tu cuenta en Uptask",
@@ -36,7 +36,7 @@ export const emailOlvidePassword = async (datos) => {
   });
   // informacion del email
   const info = await transport.sendMail({
-    from: "UpTask - Administrador de Proyectos <jamc19962222@gmail.com>",
+    from: "UpTask - Administrador de Proyectos <jamc221996@gmail.com>",
     to: email,
     subject: "UpTask - Restablece tu password",
     text: "Restablece tu password",
