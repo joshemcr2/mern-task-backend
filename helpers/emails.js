@@ -16,7 +16,7 @@ export const emailRegistro = async (datos) => {
     to: email,
     subject: "UpTask - Confirma tu cuenta",
     text: "Confirma tu cuenta en Uptask",
-    html: `<p>Hola ${nombre} porfavor confirma tu cuenta enb UpTask</p>
+    html: `<p>Hola ${nombre} porfavor confirma tu cuenta en UpTask</p>
     <p>Tu cuenta ya esta  casi lista, solo debes comprobarla en el siguiente enlace</p>
     <a href="${process.env.FRONTEND_URL}/confirmar/${token}">Confirmar Cuenta</a>
     <p>Si tu no creaste esta cuenta, puedes ignorar el mensaje</p>
